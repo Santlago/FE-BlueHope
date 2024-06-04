@@ -15,15 +15,15 @@ export default async function Home() {
   return (
     <>
       <NavBar active="paginainicial"/>
-      <main className="text-sun-900 font-outfit bg-sun-950 bg-contain bg-no-repeat bg-[url('/landingpage-bg.png')]" style={{
+      <main className="text-sun-900 font-outfit " style={{
         color: 'var(--Sun-50, #FFFDEA)',
         fontSize: '1.26281rem',
         fontStyle: 'normal',
         fontWeight: 700,
         lineHeight: 'normal'
       }}>
-        <section className=" w-full h-[51.0625rem]">
-          <div className="px-[4.38rem] pt-[3.75rem]">
+        <section className=" w-full h-[51.0625rem] bg-cover bg-no-repeat bg-[url('/landingpage-bg.png')]">
+          <div className="px-[4.38rem] pt-[6.75rem]">
             <p className="pb-[3.25rem] text-[1.9rem] font-bold text-sun-50 max-w-[41.37581rem]">
               Contribua para um futuro mais limpo e consciente. Juntos, podemos fazer a diferença!
             </p>
