@@ -6,9 +6,9 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  icons: "/icon.png",
-  title: "HeatWise",
-  description: "Melhore o site da sua empresa",
+  icons: "/logo.png",
+  title: "BlueHope",
+  description: "Ajude a salvar os oceanos",
 };
 
 export default function RootLayout({
