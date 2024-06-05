@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  icons: "/logo.png",
+  icons: "/icon.png",
   title: "BlueHope",
   description: "Ajude a salvar os oceanos",
 };
