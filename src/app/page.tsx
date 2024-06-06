@@ -27,7 +27,7 @@ export default async function Home() {
             <p className="pb-[3.25rem] text-[1.9rem] font-bold text-sun-50 max-w-[41.37581rem]">
               Contribua para um futuro mais limpo e consciente. Juntos, podemos fazer a diferença!
             </p>
-            <Link href="/planos">
+            <Link href="/login">
               <StdButton text="Comece agora!" />
             </Link>
           </div>

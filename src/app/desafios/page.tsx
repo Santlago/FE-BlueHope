@@ -42,7 +42,7 @@ export default async function Desafios() {
                             width={197}
                         />
                     </Link>
-                    <Link href="/">
+                    <Link href="/homelogado">
                         <BorderedButton text="Voltar" />
                     </Link>
                 </div>
