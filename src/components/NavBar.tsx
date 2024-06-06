@@ -13,7 +13,7 @@ export default function NavBar(props: NavBarProps) {
 
     return (
         <nav className="flex  items-center px-4 py-2 bg-[#1736B6] w-full">
-            <Link href="/">
+            <Link href={user ? "/homelogado" : "/"}>
                 <Image
                     src="/logo-small.png"
                     alt="logo"
