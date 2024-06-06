@@ -14,7 +14,7 @@ export default async function Home() {
 
   return (
     <>
-      <NavBar active="paginainicial" user="user"/>
+      <NavBar active="paginainicial" user=""/>
       <main className="text-sun-900 font-outfit " style={{
         color: 'var(--Sun-50, #FFFDEA)',
         fontSize: '1.26281rem',

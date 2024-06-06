@@ -24,18 +24,27 @@ export default function NavBar(props: NavBarProps) {
                 <li className={active == "paginainicial" ? classActive : ""}>
                     <Link href="/">Página Inicial</Link>
                 </li>
-                <li className={active == "atualizese" ? classActive : ""}>
-                    <Link href="/atualizese">Atualize-se</Link>
-                </li>
-                <li className={active == "linhademarcos" ? classActive : ""}>
-                    <Link href="/linhademarcos">Linha de Marcos</Link>
-                </li>
-                <li className={active == "rankingmundial" ? classActive : ""}>
-                    <Link href="/rankingmundial">Ranking Mundial</Link>
-                </li>
-                <li className={active == "desafios" ? classActive : ""}>
-                    <Link href="/desafios">Desafios</Link>
-                </li>
+                {user && (
+                    <li className={active === "atualizese" ? classActive : ""}>
+                        <Link href="/atualizese">Atualize-se</Link>
+                    </li>
+                )}
+                {user && (
+                    <li className={active === "linhademarcos" ? classActive : ""}>
+                        <Link href="/linhademarcos">Linha de Marcos</Link>
+                    </li>
+                )}
+                {user && (
+                    <li className={active === "rankingmundial" ? classActive : ""}>
+                        <Link href="/rankingmundial">Ranking Mundial</Link>
+                    </li>
+                )}
+                {user && (
+                    <li className={active === "desafios" ? classActive : ""}>
+                        <Link href="/desafios">Desafios</Link>
+                    </li>
+                )}
+
                 <li className="">
                     {user ?
                         <Link href="/perfil">Meu Perfil</Link>
