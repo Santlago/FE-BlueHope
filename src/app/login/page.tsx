@@ -2,7 +2,7 @@
 
 import { Button, Image, Input } from "@nextui-org/react";
 import Link from "next/link";
-import { login } from "../actions/empresa/login";
+import { login } from "../actions/usuario/login";
 import { useFormState } from "react-dom";
 import { LoginButton } from "@/components/buttons/LoginButton";
 

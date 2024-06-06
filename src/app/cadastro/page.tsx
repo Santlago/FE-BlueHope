@@ -3,7 +3,7 @@
 import { SubmitButton } from "@/components/buttons/SubmitButton";
 import { WhiteButton } from "@/components/buttons/WhiteButton";
 import { Button, Image, Input, Select, SelectItem } from "@nextui-org/react";
-import { create } from "@/app/actions/empresa/create";
+import { create } from "@/app/actions/usuario/create";
 import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { useFormState } from "react-dom";
@@ -43,7 +43,7 @@ export default async function Cadastro() {
                                 <h2 className="text-[0.942rem] font-bold">Dados do usuário</h2>
                                 <p>Preencha com base nos dados do usuário</p>
                                 <Input type="text" label="Nome completo" name="nome" variant="underlined" isInvalid={state?.messageNome != ''} errorMessage={state?.messageNome} />
-                                <Input type="text" label="País de origem" name="pais" variant="underlined" />
+                                <Input type="text" label="CPF" name="cpf" variant="underlined" />
                             </div>
                             <div>
                                 <h2 className="text-[0.942rem] font-bold">Dados de acesso</h2>

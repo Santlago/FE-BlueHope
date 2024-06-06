@@ -4,7 +4,7 @@ import { SessionPayload } from '@/app/lib/definitions';
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import 'server-only';
-import { getById } from '../actions/empresa/get-by-id';
+import { getById } from '../actions/usuario/get-by-id';
 
 const secretKey = process.env.SESSION_SECRET!;
 const encodedKey = new TextEncoder().encode(secretKey);

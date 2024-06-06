@@ -6,12 +6,11 @@ export async function create(prevState: any, formData: FormData) {
   await new Promise(r => setTimeout(r, 1000))
 
   const data = {
-    nome: formData.get("nome"),
-    cnpj: formData.get("cnpj"),
-    idPlano: parseInt(formData.get("plano")?.toString() || "1", 10),
-    telefone: formData.get("telefone"),
+    // nome: formData.get("nome"),
+    cpf: formData.get("cpf"),
     email: formData.get("email"),
     senha: formData.get("senha"),
+    telefone: formData.get("telefone"),
   }
 
   const options = {
@@ -22,13 +21,9 @@ export async function create(prevState: any, formData: FormData) {
     }
   }
 
-  const resp = await fetch(`${process.env.API_BASE_URL}/empresa`, options)
+  const resp = await fetch(`${process.env.API_BASE_URL}/usuario`, options)
 
   if (resp.ok) {
-    // const responseData = await resp.json()
-    // const userId = responseData.id
-
-    // await createSession(userId)
     redirect("/homelogado")
   }
 
