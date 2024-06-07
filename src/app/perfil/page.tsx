@@ -5,17 +5,19 @@ import { WhiteButton } from "@/components/buttons/WhiteButton";
 import { Image, Input, ScrollShadow } from "@nextui-org/react";
 import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
-import { usuario } from "../lib/usuario";
-import { perfil } from "../lib/perfil";
+import { usuarios } from "../lib/usuarios";
+import { perfis } from "../lib/perfis";
 import { desafios } from "../lib/desafios";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { CancelButton } from "@/components/buttons/CancelButton";
 
 export default async function Perfil() {
+  const usuario = usuarios[0]
+  const perfil = perfis[0]
   return (
     <>
-      <NavBar active="perfil" user="user" />
+      <NavBar active="perfil" user={true} />
       <main
         className="min-h-screen flex flex-col"
         style={{
