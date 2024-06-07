@@ -1,13 +1,16 @@
-"use server"
+// "use server"
 
-export async function getById(id: number){
+// export async function get(page?: number){
 
-    const resp = await fetch(`${process.env.API_BASE_URL}/empresa/${id}`, {next: {revalidate: 0}})
+//     if (!page) page = 1
+//     page = page - 1
 
-    if (!resp.ok){
-        return null
-    }
+//     const resp = await fetch(`${process.env.API_BASE_URL}/empresa/${id}`, {next: {revalidate: 0}})
 
-    return await resp.json()
+//     if (!resp.ok){
+//         return null
+//     }
 
-}
+//     return await resp.json()
+
+// }
