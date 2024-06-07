@@ -15,7 +15,7 @@ export default function Atualizese() {
                             Pela primeira vez, pesquisadores da USP encontram lixo no oceano profundo
                         </p>
                         <Link href="https://www.cnnbrasil.com.br/nacional/pela-primeira-vez-pesquisadores-da-usp-encontram-lixo-no-oceano-profundo/#:~:text=Cientistas%20do%20Instituto%20Oceanográfico%20(IO,ao%20largo%20da%20costa%20brasileira.">
-                            <StdButton text="Comece agora!" />
+                            <StdButton text="Leia na íntegra" />
                         </Link>
                     </div>
                 </section>

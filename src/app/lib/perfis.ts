@@ -4,7 +4,7 @@ export const perfis = [
     {
         "id": 1,
         "nome": "João Silva",
-        "somaPontos": 100,
+        "somaPontos": 10000,
         "medalha": "VIP",
         "usuario": {
             "id": 1,
@@ -17,7 +17,7 @@ export const perfis = [
     {
         "id": 2,
         "nome": "Maria Oliveira",
-        "somaPontos": 200,
+        "somaPontos": 20000,
         "medalha": "Ouro",
         "usuario": {
             "id": 2,
@@ -30,7 +30,7 @@ export const perfis = [
     {
         "id": 3,
         "nome": "Carlos Santos",
-        "somaPontos": 150,
+        "somaPontos": 15000,
         "medalha": "Prata",
         "usuario": {
             "id": 3,
@@ -43,7 +43,7 @@ export const perfis = [
     {
         "id": 4,
         "nome": "Ana Souza",
-        "somaPontos": 180,
+        "somaPontos": 18000,
         "medalha": "Ouro",
         "usuario": {
             "id": 4,
@@ -56,7 +56,7 @@ export const perfis = [
     {
         "id": 5,
         "nome": "Paulo Almeida",
-        "somaPontos": 120,
+        "somaPontos": 12000,
         "medalha": "Bronze",
         "usuario": {
             "id": 5,
@@ -69,7 +69,7 @@ export const perfis = [
     {
         "id": 6,
         "nome": "Fernanda Pereira",
-        "somaPontos": 250,
+        "somaPontos": 25000,
         "medalha": "VIP",
         "usuario": {
             "id": 6,
@@ -82,7 +82,7 @@ export const perfis = [
     {
         "id": 7,
         "nome": "Lucas Costa",
-        "somaPontos": 170,
+        "somaPontos": 17000,
         "medalha": "Prata",
         "usuario": {
             "id": 7,
@@ -95,7 +95,7 @@ export const perfis = [
     {
         "id": 8,
         "nome": "Bruna Lima",
-        "somaPontos": 220,
+        "somaPontos": 22000,
         "medalha": "Ouro",
         "usuario": {
             "id": 8,
@@ -108,7 +108,7 @@ export const perfis = [
     {
         "id": 9,
         "nome": "Ricardo Rodrigues",
-        "somaPontos": 190,
+        "somaPontos": 19000,
         "medalha": "Prata",
         "usuario": {
             "id": 9,
@@ -121,7 +121,7 @@ export const perfis = [
     {
         "id": 10,
         "nome": "Renata Oliveira",
-        "somaPontos": 210,
+        "somaPontos": 21000,
         "medalha": "Ouro",
         "usuario": {
             "id": 10,

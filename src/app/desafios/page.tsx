@@ -1,97 +1,49 @@
 "use server"
 
+import NavBar from "@/components/NavBar";
+import { desafios } from "../lib/desafios";
+import { Button } from "@nextui-org/react";
+import { WhiteButton } from "@/components/buttons/WhiteButton";
 import Footer from "@/components/Footer";
-import { BorderedButton } from "@/components/buttons/BorderedButton";
-import { Image } from "@nextui-org/react";
-import Link from "next/link";
 
 export default async function Desafios() {
-
-    const planos = [
-        {
-            titulo: "Plano Básico",
-            preco: "199.00",
-            frequencia: "Mensal",
-            quantidadeSite: "Apenas 1"
-        },
-        {
-            titulo: "Plano Comum",
-            preco: "399.00",
-            frequencia: "Semanal",
-            quantidadeSite: "Até 3"
-        },
-        {
-            titulo: "Plano Premium",
-            preco: "799.00",
-            frequencia: "Diária",
-            quantidadeSite: "Ilimitado"
-        }
-    ]
     return (
         <>
-            <main className="h-full" style={{
-                background: 'var(--Sun-700, #BB5B02)',
-                boxShadow: '0px 300px 250px 0px rgba(246, 141, 43, 0.50) inset'
+            <NavBar active="desafios" user={true} />
+            <main className="flex flex-col justify-around items-center" style={{
+                background: 'var(--Azure-Radiance-500, #3B7EFF)',
+                boxShadow: '0px 300px 250px 0px #1B57F5 inset'
             }}>
-                <div className="py-[3.06rem] px-[2.88rem] flex justify-between">
-                    <Link href='/'>
-                        <Image
-                            src="/logo-small.png"
-                            alt="logo"
-                            height={46}
-                            width={197}
-                        />
-                    </Link>
-                    <Link href="/homelogado">
-                        <BorderedButton text="Voltar" />
-                    </Link>
+                <h1 className="text-center font-bold font-outfit text-[3rem] text-[#EEF5FF] mt-[3.63rem] mb-[4.5rem]">Desafios</h1>
+                <div className="flex flex-col justify-center items-center text-center gap-5 mb-[6.38rem] font-bold font-outfit text-[0.7rem] text-[#EEF5FF] max-w-[22rem]">
+                    <h2>ATENÇÃO!</h2>
+                    <p>
+                        Você pode visualizar seus desafios já ativos clicando neles aqui ou no seu perfil
+                    </p>
                 </div>
-                <div className="flex justify-center items-center">
-                    <div className="px-[11.44rem] mt-[5rem] ">
-                        <div className="text-sun-50 font-bold text-[2.91894rem] font-outfit">
-                            <h1>Confira nossos planos</h1>
+                <div className="flex flex-col items-center">
+                    {desafios.map(desafio => (
+                        <div key={desafio.id} className="bg-white p-8 rounded-3xl shadow-md w-[49rem] mb-8">
+                            <h1 className="text-2xl font-bold text-blue-600 mb-4">{desafio.descricao}</h1>
+                            <div className="mb-4">
+                                <h2 className="text-xl font-bold text-blue-600">Dificuldade:</h2>
+                                <p className="text-green-500 font-bold" >
+                                    Moderado
+                                </p>
+                            </div>
+                            <div className="mb-4">
+                                <h2 className="text-xl font-bold text-blue-600">Compensação:</h2>
+                                <p className="text-blue-600 text-2xl font-bold">{desafio.pontos} pontos</p>
+                            </div>
+                            <Button color="success" radius="full">Começar desafio</Button>
                         </div>
-                        <div className="flex justify-between gap-[2.48rem] mt-[4rem] mb-[4rem]">
-                            {planos.map(plano => (
-                                <div className="bg-sun-500 max-h-[25.135rem] w-[20.39325rem] rounded-[1.83225rem]" style={{
-                                    boxShadow: '0px 0px 24.774px 0px rgba(0, 0, 0, 0.25)'
-                                }}>
-                                    <div className="flex flex-col justify-around h-full text-center font-outfit text-sun-50 p-[2.3rem]">
-
-                                        <div>
-                                            <h1 className="text-center text-[1.96656rem] font-bold">{plano.titulo}</h1>
-                                        </div>
-                                        <div>
-                                            <p className="font-extrabold">
-                                                <span className="text-[1.315rem]">
-                                                    R$
-                                                </span>
-                                                <span className="text-[2.86488rem]">
-                                                    {plano.preco}
-                                                </span>
-                                            </p>
-                                            <p className="text-[1.43244rem] font-semibold">mensalmente</p>
-                                        </div>
-                                        <div>
-                                            <p className="text-[1.02513rem] font-semibold">Frequência de Análise</p>
-                                            <p className="text-[1.31219rem] font-extrabold">{plano.frequencia}</p>
-                                        </div>
-                                        <div>
-                                            <p className="text-[1.02513rem] font-semibold">Quantidade de Sites</p>
-                                            <p className="text-[1.31219rem] font-extrabold">{plano.quantidadeSite}</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            ))}
-
-
-                        </div>
-                    </div>
+                    ))}
                 </div>
-
+                <div className="mb-[6rem]">
+                    <WhiteButton text="Ver Mais" />
+                </div>
+                <Footer/>
             </main>
-            <Footer />
         </>
     )
 }

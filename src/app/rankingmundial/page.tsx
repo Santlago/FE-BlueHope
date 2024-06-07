@@ -20,7 +20,7 @@ export default function RankingMundial() {
                         className="h-[17rem]"
                     />
                 </div>
-                <div className="flex items-center gap-[3.94rem] pt-[3.31rem] pb-[4rem] mb-[8rem] border-y-2 border-white ">
+                <div className="flex items-center gap-[3.94rem] pt-[3.31rem] pb-[4rem] mb-[8rem] border-y-2 border-white px-[7rem]">
                     <div>
                         <Image
                             src="https://i.pravatar.cc/300"
@@ -28,7 +28,7 @@ export default function RankingMundial() {
                         />
                     </div>
                     <div className="flex flex-col gap-[.5rem] max-w-[21rem]">
-                        <h2 className="font-bold font-outfit text-[1.44rem] text-white">Você está em 90421° lugar com 2500 pontos</h2>
+                        <h2 className="font-bold font-outfit text-[1.44rem] text-white">Você está em 904° lugar com 2500 pontos</h2>
                         <p className="text-[1rem] font-outfit text-white">Nada mal, mas pode melhorar ;p</p>
                     </div>
                 </div>
