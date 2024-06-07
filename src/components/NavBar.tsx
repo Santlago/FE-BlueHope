@@ -2,8 +2,8 @@ import { Image } from "@nextui-org/react";
 import Link from "next/link";
 
 interface NavBarProps {
-    user: String
-    active: "paginainicial" | "atualizese" | "linhademarcos" | "rankingmundial" | "desafios"
+    user: boolean
+    active: "paginainicial" | "atualizese" | "linhademarcos" | "rankingmundial" | "desafios" | "perfil"
 }
 
 export default function NavBar(props: NavBarProps) {
@@ -22,7 +22,7 @@ export default function NavBar(props: NavBarProps) {
             </Link>
             <ul className="flex gap-14 justify-center w-full font-outfit text-[#FFFDEA] font-bold text-[1.26rem]">
                 <li className={active == "paginainicial" ? classActive : ""}>
-                    <Link href="/">Página Inicial</Link>
+                    <Link href={user ? "/homelogado" : "/"}>Página Inicial</Link>
                 </li>
                 {user && (
                     <li className={active === "atualizese" ? classActive : ""}>
