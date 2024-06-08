@@ -18,6 +18,7 @@ export function DesafioData({ desafios }: any) {
         const fetchData = async () => {
             try {
                 const data = await get(page, 5);
+                console.log(data)
                 setDesafios(data._embedded.desafioList)
                 setTotalPages(data.page.totalPages);
             } catch (error) {

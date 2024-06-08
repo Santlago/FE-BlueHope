@@ -10,10 +10,18 @@ import { get } from "../actions/usuario/get";
 import { DesafioData } from "./desafioData";
 
 export default async function Desafios() {
+    let desafios = [];
 
-    const data: any = await get()
-    console.log(data)
-    const desafios = data._embedded.desafioList
+    try {
+        const data: any = await get();
+        console.log(data);
+        if (data && data._embedded && data._embedded.desafioList) {
+            desafios = data._embedded.desafioList;
+        }
+        console.log(desafios);
+    } catch (error) {
+        console.error('Error fetching desafios:', error);
+    }
 
     return (
         <>
@@ -35,9 +43,7 @@ export default async function Desafios() {
                     </p>
                 </div>
                 
-                <DesafioData
-                    desafios = {desafios}
-                />
+                <DesafioData desafios={desafios} />
                 <Footer />
             </main>
         </>
