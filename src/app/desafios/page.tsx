@@ -1,33 +1,19 @@
-"use client";
+"use server"
 
 import NavBar from "@/components/NavBar";
-import { desafios } from "../lib/desafios";
+// import { desafios } from "../lib/desafios";
 import { Button, Pagination } from "@nextui-org/react";
 import { WhiteButton } from "@/components/buttons/WhiteButton";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { get } from "../actions/usuario/get";
+import { DesafioData } from "./desafioData";
 
-export default function Desafios() {
-    const [page, setPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(10);
+export default async function Desafios() {
 
-    const handlePageChange = (page: number) => {
-        setPage(page);
-    };
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await get(page);
-                setTotalPages(data.totalPages);
-            } catch (error) {
-                throw new Error("falha");
-            }
-        };
-
-        fetchData();
-    }, [page]);
+    const data: any = await get()
+    console.log(data)
+    const desafios = data._embedded.desafioList
 
     return (
         <>
@@ -48,33 +34,10 @@ export default function Desafios() {
                         Você pode visualizar seus desafios já ativos clicando neles aqui ou no seu perfil
                     </p>
                 </div>
-                <Pagination
-                    onChange={handlePageChange}
-                    isCompact
-                    showControls
-                    total={totalPages}
-                    page={page}
-                    className="mt-6"
+                
+                <DesafioData
+                    desafios = {desafios}
                 />
-                <div className="flex flex-col items-center">
-                    {desafios.map((desafio) => (
-                        <div key={desafio.id} className="bg-white p-8 rounded-3xl shadow-md w-[49rem] mb-8">
-                            <h1 className="text-2xl font-bold text-blue-600 mb-4">{desafio.descricao}</h1>
-                            <div className="mb-4">
-                                <h2 className="text-xl font-bold text-blue-600">Dificuldade:</h2>
-                                <p className="text-green-500 font-bold">Moderado</p>
-                            </div>
-                            <div className="mb-4">
-                                <h2 className="text-xl font-bold text-blue-600">Compensação:</h2>
-                                <p className="text-blue-600 text-2xl font-bold">{desafio.pontos} pontos</p>
-                            </div>
-                            <Button color="success" radius="full">Começar desafio</Button>
-                        </div>
-                    ))}
-                </div>
-                <div className="mb-[6rem]">
-                    <WhiteButton text="Ver Mais" />
-                </div>
                 <Footer />
             </main>
         </>
